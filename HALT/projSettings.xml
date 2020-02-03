@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdtprojectproperties>
+<section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.IncludePaths">
+<language name="C Source File">
+<includepath>${XTENSA_PATH}/xtensa-esp32-elf/include/c++/8.2.0</includepath>
+<includepath>${IDF_PATH}/components/esp_eth/include</includepath>
+<includepath>${IDF_PATH}/components/driver/include</includepath>
+<includepath>${IDF_PATH}/components/log/include</includepath>
+<includepath>${IDF_PATH}/components/esp_event/include</includepath>
+<includepath>${IDF_PATH}/components/esp_common/include</includepath>
+<includepath>${IDF_PATH}/components/freertos/include</includepath>
+<includepath>${IDF_PATH}/components/esp_wifi/include</includepath>
+<includepath>${IDF_PATH}/components/nvs_flash/include</includepath>
+<includepath>${IDF_PATH}/components/lwip/port/esp32/include</includepath>
+<includepath>${IDF_PATH}/components/tcpip_adapter/include</includepath>
+<includepath>${IDF_PATH}/components/lwip/lwip/src/include/lwip</includepath>
+<includepath>${IDF_PATH}/components/esp32/include</includepath>
+<includepath>${IDF_PATH}/components/esp_websocket_client/include</includepath>
+<includepath>${IDF_PATH}/components/cbor/port/include</includepath>
+<includepath>${IDF_PATH}/components/log</includepath>
+<includepath>${IDF_PATH}/components/lwip/include</includepath>
+<includepath>${IDF_PATH}/components/lwip/include/apps</includepath>
+<includepath>${IDF_PATH}/components/lwip/lwip/src/include</includepath>
+<includepath>${IDF_PATH}/components/mqtt/esp-mqtt/include</includepath>
+<includepath workspace_path="true">/UPNode/components</includepath>
+<includepath workspace_path="true">/UPNode/build/include</includepath>
+<includepath workspace_path="true">/UPNode/components/BME280</includepath>
+<includepath workspace_path="true">/UPNode/components/BMI160</includepath>
+<includepath workspace_path="true">/UPNode/components/GPS</includepath>
+<includepath workspace_path="true">/UPNode/components/OPT3001</includepath>
+<includepath workspace_path="true">/UPNode/components/arduino-esp32/libraries/Wire/</includepath>
+<includepath workspace_path="true">/UPNode/components/arduino-esp32/libraries/SPI/</includepath>
+<includepath workspace_path="true">/UPNode/components/arduino-esp32/cores/esp32</includepath>
+<includepath workspace_path="true">/UPNode/components/MQTTSNClient</includepath>
+
+</language>
+<language name="C++ Source File">
+<includepath>${XTENSA_PATH}/xtensa-esp32-elf/include/c++/8.2.0</includepath>
+<includepath>${IDF_PATH}/components/esp_eth/include</includepath>
+<includepath>${IDF_PATH}/components/driver/include</includepath>
+<includepath>${IDF_PATH}/components/log/include</includepath>
+<includepath>${IDF_PATH}/components/esp_event/include</includepath>
+<includepath>${IDF_PATH}/components/esp_common/include</includepath>
+<includepath>${IDF_PATH}/components/freertos/include</includepath>
+<includepath>${IDF_PATH}/components/esp_wifi/include</includepath>
+<includepath>${IDF_PATH}/components/nvs_flash/include</includepath>
+<includepath>${IDF_PATH}/components/lwip/port/esp32/include</includepath>
+<includepath>${IDF_PATH}/components/tcpip_adapter/include</includepath>
+<includepath>${IDF_PATH}/components/lwip/lwip/src/include/lwip</includepath>
+<includepath>${IDF_PATH}/components/esp32/include</includepath>
+<includepath>${IDF_PATH}/components/esp_websocket_client/include</includepath>
+<includepath>${IDF_PATH}/components/cbor/port/include</includepath>
+<includepath>${IDF_PATH}/components/log</includepath>
+<includepath>${IDF_PATH}/components/lwip/include</includepath>
+<includepath>${IDF_PATH}/components/lwip/include/apps</includepath>
+<includepath>${IDF_PATH}/components/lwip/lwip/src/include</includepath>
+<includepath>${IDF_PATH}/components/mqtt/esp-mqtt/include</includepath>
+<includepath workspace_path="true">/UPNode/components</includepath>
+<includepath workspace_path="true">/UPNode/build/include</includepath>
+<includepath workspace_path="true">/UPNode/components/BME280</includepath>
+<includepath workspace_path="true">/UPNode/components/BMI160</includepath>
+<includepath workspace_path="true">/UPNode/components/GPS</includepath>
+<includepath workspace_path="true">/UPNode/components/OPT3001</includepath>
+<includepath workspace_path="true">/UPNode/components/arduino-esp32/cores/esp32</includepath>
+<includepath workspace_path="true">/UPNode/components/arduino-esp32/libraries/SPI/</includepath>
+<includepath workspace_path="true">/UPNode/components/arduino-esp32/libraries/Wire/</includepath>
+<includepath workspace_path="true">/UPNode/components/MQTTSNClient</includepath>
+
+</language>
+<language name="Object File">
+
+</language>
+<language name="Assembly Source File">
+
+</language>
+</section>
+<section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.Macros">
+<language name="C Source File">
+
+</language>
+<language name="C++ Source File">
+
+</language>
+<language name="Object File">
+
+</language>
+<language name="Assembly Source File">
+
+</language>
+</section>
+</cdtprojectproperties>

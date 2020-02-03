@@ -1,0 +1,116 @@
+Toolchain path: /home/karsh/esp/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc
+Toolchain version: esp32-2019r1
+Compiler version: 8.2.0
+Python requirements from /home/karsh/Work/IDFRepo/LPG_esp_idf/requirements.txt are satisfied.
+MONITOR
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0018,len:4
+load:0x3fff001c,len:6524
+load:0x40078000,len:12016
+load:0x40080400,len:6624
+entry 0x40080764
+[0;32mI (28) boot: ESP-IDF v4.1-dev-58-g02c7c3885-dirty 2nd stage bootloader[0m
+[0;32mI (28) boot: compile time 13:50:56[0m
+[0;32mI (29) boot: Enabling RNG early entropy source...[0m
+[0;32mI (34) boot: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot: SPI Mode       : DIO[0m
+[0;32mI (43) boot: SPI Flash Size : 16MB[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00005000[0m
+[0;32mI (65) boot:  1 otadata          OTA data         01 00 0000e000 00002000[0m
+[0;32mI (73) boot:  2 app0             OTA app          00 10 00010000 00140000[0m
+[0;32mI (80) boot:  3 app1             OTA app          00 11 00150000 00140000[0m
+[0;32mI (87) boot:  4 spiffs           Unknown data     01 82 00290000 00170000[0m
+[0;32mI (95) boot: End of partition table[0m
+[0;32mI (99) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x242b4 (148148) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=0x000342dc vaddr=0x3ffb0000 size=0x03434 ( 13364) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=0x00037718 vaddr=0x40080000 size=0x00400 (  1024) load[0m
+[0;32mI (168) esp_image: segment 3: paddr=0x00037b20 vaddr=0x40080400 size=0x084f0 ( 34032) load[0m
+[0;32mI (190) esp_image: segment 4: paddr=0x00040018 vaddr=0x400d0018 size=0x944fc (607484) map[0m
+[0;32mI (406) esp_image: segment 5: paddr=0x000d451c vaddr=0x400888f0 size=0x08e7c ( 36476) load[0m
+[0;32mI (432) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (432) boot: Disabling RNG early entropy source...[0m
+[0;32mI (433) cpu_start: Pro cpu up.[0m
+[0;32mI (436) cpu_start: Application information:[0m
+[0;32mI (441) cpu_start: Project name:     UPNode[0m
+[0;32mI (446) cpu_start: App version:      1[0m
+[0;32mI (451) cpu_start: Compile time:     Dec  2 2019 13:50:56[0m
+[0;32mI (457) cpu_start: ELF file SHA256:  adf12d92d1b1fdb1...[0m
+[0;32mI (463) cpu_start: ESP-IDF:          v4.1-dev-58-g02c7c3885-dirty[0m
+[0;32mI (469) cpu_start: Starting app cpu, entry point is 0x40081208[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (480) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (487) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (493) heap_init: At 3FFB99F0 len 00026610 (153 KiB): DRAM[0m
+[0;32mI (499) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (505) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (512) heap_init: At 4009176C len 0000E894 (58 KiB): IRAM[0m
+[0;32mI (518) cpu_start: Pro cpu start user code[0m
+[0;32mI (537) spi_flash: detected chip: generic[0m
+[0;32mI (538) spi_flash: flash io: dio[0m
+[0;32mI (538) cpu_start: Chip Revision: 1[0m
+[0;33mW (539) cpu_start: Chip revision is higher than the one configured in menuconfig. Suggest to upgrade it.[0m
+[0;32mI (550) cpu_start: Starting scheduler on PRO CPU.[0m
+[0;32mI (0) cpu_start: Starting scheduler on APP CPU.[0m
+ÿWire.endTransmission() failed.
+[0;32mI (1435) Matilda:: {mqttTest} Start WIFI !!![0m
+[0;32mI (1435) LPG_WIFI : {startService},CALL[0m
+[0;32mI (1435) LPG_WIFI : {constructor},CALL[0m
+I (1445) wifi: wifi driver task: 3ffc51d8, prio:23, stack:3584, core=0
+[0;32mI (1445) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE[0m
+[0;32mI (1445) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE[0m
+I (1475) wifi: wifi firmware version: 6236ba1
+I (1475) wifi: config NVS flash: enabled
+I (1475) wifi: config nano formating: disabled
+I (1475) wifi: Init dynamic tx buffer num: 32
+I (1485) wifi: Init data frame dynamic rx buffer num: 32
+I (1485) wifi: Init management frame dynamic rx buffer num: 32
+I (1495) wifi: Init management short buffer num: 32
+I (1495) wifi: Init static rx buffer size: 1600
+I (1505) wifi: Init static rx buffer num: 10
+I (1505) wifi: Init dynamic rx buffer num: 32
+[0;32mI (1595) phy: phy_version: 4102, 2fa7a43, Jul 15 2019, 13:06:06, 0, 0[0m
+I (1595) wifi: mode : sta (b4:e6:2d:da:d4:bd)
+[0;32mI (1595) Matilda:: {mqttTest} Connecting to WIFI !!![0m
+[0;32mI (1595) LPG_WIFI : {wifi_event_handler},CALL[0m
+[0;32mI (1605) LPG_WIFI : {wifi_event_handler},start connection[0m
+I (1735) wifi: new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1
+I (1735) wifi: state: init -> auth (b0)
+I (1745) wifi: state: auth -> assoc (0)
+I (1745) wifi: state: assoc -> run (10)
+I (1785) wifi: connected with biba-testbed, channel 6, 40D, bssid = c4:6e:1f:62:ef:ea
+I (1795) wifi: pm start, type: 1
+
+[0;32mI (1795) LPG_WIFI : {wifi_event_handler},CALL[0m
+[0;32mI (2435) tcpip_adapter: sta ip: 192.168.0.100, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2435) LPG_WIFI : {wifi_event_handler},CALL[0m
+[0;32mI (2435) LPG_WIFI : got ip:192.168.0.100[0m
+[0;32mI (2445) LPG_WIFI : {wifi_event_handler},connected successfully[0m
+[0;32mI (11605) Matilda:: {mqttTest} Start MQTT !!![0m
+[0;32mI (11605) MQTT: : {constructor},CALL[0m
+[0;32mI (11605) MQTT: : {constructor},Set handle[0m
+[0;32mI (11605) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE[0m
+[0;32mI (11615) MQTT: : {mqtt_app_start}, Init configuration, OK[0m
+[0;32mI (11615) MQTT: : {constructor},Set event handler[0m
+[0;32mI (11625) MQTT: : {constructor},All done[0m
+[0;32mI (11625) Matilda:: {mqttTest} Connecting to MQTT !!![0m
+[0;32mI (11635) MQTT: : {mqtt_event_handler}, {event:before connect}[0m
+[0;32mI (17435) MQTT_CLIENT: Sending MQTT CONNECT message, type: 1, id: 0000[0m
+[0;32mI (17465) MQTT: : {mqtt_event_handler}, {event:connected}[0m
+[0;33m--- idf_monitor on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080000: _WindowOverflow4 at /home/karsh/Work/IDFRepo/LPG_esp_idf/components/freertos/xtensa_vectors.S:1778
+[0m
+[0;33m0x400d0018: _stext at ??:?
+[0m
+[0;33m0x400888f0: ppTxProtoProc at ??:?
+[0m
+[0;33m0x40081208: call_start_cpu1 at /home/karsh/Work/IDFRepo/LPG_esp_idf/components/esp32/cpu_start.c:281
+[0m
+[0m
