@@ -30,21 +30,24 @@
 Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver(0x71);
 //Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver(0x41);
 
-#define SERVOMIN  110 // this is the 'minimum' pulse length count (out of 4096)
-#define SERVOMAX  510 // this is the 'maximum' pulse length count (out of 4096)
+#define SERVOMIN  150 // this is the 'minimum' pulse length count (out of 4096)
+#define SERVOMAX  600 // this is the 'maximum' pulse length count (out of 4096)
 
 // May have to adjust values to match your servos
 // Test your servo with the procedures below
 
 // our servo # counter
 uint8_t servonum = 0;
-int convert2angle(int myang);
+
 
 void servosetup() {
 
 	Serial.println("pca9685_TurnoutTest!");
 	pwm.begin();
+
+	pwm.setOscillatorFrequency(27000000);
 	pwm.setPWMFreq(50);  // Analog servos run at ~50 Hz updates
+	  Wire.setClock(400000);
 	delay(50);
 }
 ///////////////////Functions//////////////////////
@@ -54,6 +57,15 @@ void driveMin() {
 }
 void driveMax() {
 	pwm.setPWM(servonum, 0, SERVOMAX);    //Use to test high range
+}
+
+int convert2angle(int myang) {
+	int pulse = map(myang, 0, 180, SERVOMIN, SERVOMAX); // map angle of 0 to 180 to Servo min and Servo max
+	Serial.print("Angle/Pulse: ");
+	Serial.print(myang);
+	Serial.print(" / ");
+	Serial.println(pulse);
+	return pulse;
 }
 ///////////////End Of Functions//////////////////
 
@@ -68,11 +80,4 @@ void PCA9685Task(void *arg) {
 	}
 }
 
-int convert2angle(int myang) {
-	int pulse = map(myang, 0, 180, SERVOMIN, SERVOMAX); // map angle of 0 to 180 to Servo min and Servo max
-	Serial.print("Angle/Pulse: ");
-	Serial.print(myang);
-	Serial.print(" / ");
-	Serial.println(pulse);
-	return pulse;
-}
+
