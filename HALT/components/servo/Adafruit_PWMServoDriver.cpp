@@ -28,7 +28,7 @@
  */
 
 #include "Adafruit_PWMServoDriver.h"
-#include "../../components/arduino-esp32/libraries/Wire/src/Wire.h"
+
 
 //#define ENABLE_DEBUG_OUTPUT
 

@@ -109,7 +109,10 @@ main.o: /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/main.cpp \
  /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/components/arduino-esp32/cores/esp32/esp32-hal.h \
  /home/biba/BIBA/esp/ComponentRepo/esp-idf/components/freertos/include/freertos/queue.h \
  /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/MatildaApp/matildaApp.h \
- /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/servo/servoApp.h
+ /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/servo/servoApp.h \
+ /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/servo/PWMtest.h \
+ /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/servo/PCA9685Test/PCA9685test.h \
+ /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/servo/Oscillator/oscillator.h
 
 /home/biba/BIBA/esp/ComponentRepo/esp-idf/components/nvs_flash/include/nvs_flash.h:
 
@@ -332,4 +335,10 @@ main.o: /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/main.cpp \
 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/MatildaApp/matildaApp.h:
 
 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/servo/servoApp.h:
+
+/home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/servo/PWMtest.h:
+
+/home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/servo/PCA9685Test/PCA9685test.h:
+
+/home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/servo/Oscillator/oscillator.h:
 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/./main.cpp:
