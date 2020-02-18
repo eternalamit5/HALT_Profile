@@ -58,7 +58,7 @@ void servoSetup() {
    * Failure to correctly set the int.osc value will cause unexpected PWM results
    */
   pwm.setOscillatorFrequency(27000000);
-  pwm.setPWMFreq(SERVO_FREQ);  // Analog servos run at ~50 Hz updates
+  pwm.setPWMFreq(SERVO_FREQ);  //  Analog servos run at ~50 Hz updates
   //Wire.setClock(400000);
   delay(10);
   //setServoPulse(0, 0.0015);
