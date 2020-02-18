@@ -59,7 +59,7 @@ void servoSetup() {
    */
   pwm.setOscillatorFrequency(27000000);
   pwm.setPWMFreq(SERVO_FREQ);  // Analog servos run at ~50 Hz updates
-  Wire.setClock(400000);
+  //Wire.setClock(400000);
   delay(10);
   //setServoPulse(0, 0.0015);
 }

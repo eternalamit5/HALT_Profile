@@ -27,7 +27,7 @@
 #include "../../../components/arduino-esp32/libraries/Wire/src/Wire.h"
 #include <Adafruit_PWMServoDriver.h>
 
-Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver(0x71);
+Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver(0x40,Wire);
 //Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver(0x41);
 
 #define SERVOMIN  150 // this is the 'minimum' pulse length count (out of 4096)
@@ -47,7 +47,7 @@ void servosetup() {
 
 	pwm.setOscillatorFrequency(27000000);
 	pwm.setPWMFreq(50);  // Analog servos run at ~50 Hz updates
-	  Wire.setClock(400000);
+	  //Wire.setClock(400000);
 	delay(50);
 }
 ///////////////////Functions//////////////////////
@@ -73,7 +73,7 @@ void PCA9685Task(void *arg) {
 	servosetup();
 	while (1) {
 
-		for (int angle = 0; angle < 181; angle += 15) { // testing only right now
+		for (int angle = 0; angle < 241; angle += 30) { // testing only right now
 			delay(500);
 			pwm.setPWM(1, 0, convert2angle(angle)); // May only need this for sweeping the servo
 		}
