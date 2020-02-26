@@ -58,10 +58,10 @@ void app_main(void) {
 	//xTaskCreate(matidaMotionTask, "matildaMotionTestTask", 20000, NULL, 1, NULL);
 
 
-	xTaskCreate(ServoMotorTask,"testServoTask",10000,NULL,1,NULL);
+	//xTaskCreate(ServoMotorTask,"testServoTask",10000,NULL,1,NULL);
 	//printf("8 channel Servo test main!");
 	//xTaskCreate(PWMtask,"testPWMtask",10000,NULL,1,NULL);
-	//xTaskCreate(PCA9685Task,"testPCA9685Task",10000,NULL,1,NULL);
+	xTaskCreate(PCA9685Task,"testPCA9685Task",10000,NULL,1,NULL);
 	//xTaskCreate(OscillatorTask,"OscillatorTask",10000,NULL,1,NULL);
 
 
