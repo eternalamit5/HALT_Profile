@@ -28603,68 +28603,68 @@ END GROUP
  .literal.rtc_clk_wait_for_slow_cycle
                 0x0000000040080bc0        0x8 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_time.o)
                                          0x20 (size before relaxing)
- .literal.rtc_wdt_get_protect_status
-                0x0000000040080bc8        0x8 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
- .literal.rtc_wdt_protect_off
-                0x0000000040080bd0        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
-                                          0x8 (size before relaxing)
- .literal.rtc_wdt_protect_on
-                0x0000000040080bd0        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
-                                          0x4 (size before relaxing)
- .literal.rtc_wdt_enable
-                0x0000000040080bd0        0xc /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
-                                         0x10 (size before relaxing)
- .literal.rtc_wdt_flashboot_mode_enable
-                0x0000000040080bdc        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
-                                          0x4 (size before relaxing)
- .literal.rtc_wdt_feed
-                0x0000000040080bdc        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
-                                         0x14 (size before relaxing)
- .literal.rtc_wdt_set_time
-                0x0000000040080bdc       0x10 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
-                                         0x20 (size before relaxing)
- .literal.rtc_wdt_set_stage
-                0x0000000040080bec       0x14 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
-                                         0x24 (size before relaxing)
- .literal.rtc_wdt_disable
-                0x0000000040080c00        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
-                                         0x2c (size before relaxing)
- .literal.rtc_wdt_set_length_of_reset_signal
-                0x0000000040080c00       0x10 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
-                                         0x14 (size before relaxing)
- .literal.rtc_wdt_is_on
-                0x0000000040080c10        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
-                                          0x4 (size before relaxing)
  .literal.spi_flash_hal_device_config
-                0x0000000040080c10        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040080bc8        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
                                           0x8 (size before relaxing)
  .literal.spi_flash_hal_configure_host_read_mode
-                0x0000000040080c10       0x10 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040080bc8       0x14 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
                                          0x48 (size before relaxing)
  .literal.spi_flash_hal_common_command
-                0x0000000040080c20        0xc /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040080bdc        0xc /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
                                          0x34 (size before relaxing)
  .literal.spi_flash_hal_erase_chip
-                0x0000000040080c2c        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040080be8        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
                                           0x4 (size before relaxing)
  .literal.spi_flash_hal_erase_sector
-                0x0000000040080c2c        0x4 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040080be8        0x4 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
                                          0x14 (size before relaxing)
  .literal.spi_flash_hal_erase_block
-                0x0000000040080c30        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040080bec        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
                                          0x14 (size before relaxing)
  .literal.spi_flash_hal_program_page
-                0x0000000040080c30        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040080bec        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
                                          0x1c (size before relaxing)
  .literal.spi_flash_hal_read
-                0x0000000040080c30        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040080bec        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
                                          0x18 (size before relaxing)
  .literal.spi_flash_hal_host_idle
-                0x0000000040080c30        0x4 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040080bec        0x4 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
                                           0x8 (size before relaxing)
  .literal.spi_flash_hal_set_write_protect
-                0x0000000040080c34        0x4 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040080bf0        0x4 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
                                           0x8 (size before relaxing)
+ .literal.rtc_wdt_get_protect_status
+                0x0000000040080bf4        0x8 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+ .literal.rtc_wdt_protect_off
+                0x0000000040080bfc        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                                          0x8 (size before relaxing)
+ .literal.rtc_wdt_protect_on
+                0x0000000040080bfc        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                                          0x4 (size before relaxing)
+ .literal.rtc_wdt_enable
+                0x0000000040080bfc        0xc /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                                         0x10 (size before relaxing)
+ .literal.rtc_wdt_flashboot_mode_enable
+                0x0000000040080c08        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                                          0x4 (size before relaxing)
+ .literal.rtc_wdt_feed
+                0x0000000040080c08        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                                         0x14 (size before relaxing)
+ .literal.rtc_wdt_set_time
+                0x0000000040080c08       0x10 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                                         0x20 (size before relaxing)
+ .literal.rtc_wdt_set_stage
+                0x0000000040080c18       0x10 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                                         0x24 (size before relaxing)
+ .literal.rtc_wdt_disable
+                0x0000000040080c28        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                                         0x2c (size before relaxing)
+ .literal.rtc_wdt_set_length_of_reset_signal
+                0x0000000040080c28       0x10 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                                         0x14 (size before relaxing)
+ .literal.rtc_wdt_is_on
+                0x0000000040080c38        0x0 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                                          0x4 (size before relaxing)
  .literal.rtc_clk_32k_enable_common
                 0x0000000040080c38       0x14 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_clk.o)
                                          0x18 (size before relaxing)
@@ -29836,61 +29836,112 @@ END GROUP
                 0x0000000040086f60       0x79 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_time.o)
                 0x0000000040086f60                rtc_clk_wait_for_slow_cycle
  *fill*         0x0000000040086fd9        0x0 
- *libsoc.a:emac_hal.*(.literal.emac_hal_tx_complete_cb .text.emac_hal_tx_complete_cb)
- *libsoc.a:rtc_wdt.*(.literal .literal.* .text .text.*)
+ *libsoc.a:spi_flash_hal_iram.*(.literal .literal.* .text .text.*)
  *fill*         0x0000000040086fd9        0x3 
+ .text.spi_flash_hal_device_config
+                0x0000000040086fdc       0x84 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040086fdc                spi_flash_hal_device_config
+ .text.spi_flash_hal_configure_host_read_mode
+                0x0000000040087060      0x1b1 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040087060                spi_flash_hal_configure_host_read_mode
+ *fill*         0x0000000040087211        0x3 
+ .text.spi_flash_hal_common_command
+                0x0000000040087214      0x185 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040087214                spi_flash_hal_common_command
+ *fill*         0x0000000040087399        0x3 
+ .text.spi_flash_hal_erase_chip
+                0x000000004008739c       0x22 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x000000004008739c                spi_flash_hal_erase_chip
+ *fill*         0x00000000400873be        0x2 
+ .text.spi_flash_hal_erase_sector
+                0x00000000400873c0       0x5a /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x00000000400873c0                spi_flash_hal_erase_sector
+ *fill*         0x000000004008741a        0x2 
+ .text.spi_flash_hal_erase_block
+                0x000000004008741c       0x52 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x000000004008741c                spi_flash_hal_erase_block
+ *fill*         0x000000004008746e        0x2 
+ .text.spi_flash_hal_program_page
+                0x0000000040087470       0xa7 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040087470                spi_flash_hal_program_page
+ *fill*         0x0000000040087517        0x1 
+ .text.spi_flash_hal_read
+                0x0000000040087518       0xcb /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040087518                spi_flash_hal_read
+ *fill*         0x00000000400875e3        0x1 
+ .text.spi_flash_hal_host_idle
+                0x00000000400875e4       0x3a /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x00000000400875e4                spi_flash_hal_host_idle
+ *fill*         0x000000004008761e        0x2 
+ .text.spi_flash_hal_set_write_protect
+                0x0000000040087620       0x40 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040087620                spi_flash_hal_set_write_protect
+ *fill*         0x0000000040087660        0x0 
+ .text.spi_flash_hal_poll_cmd_done
+                0x0000000040087660       0x11 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
+                0x0000000040087660                spi_flash_hal_poll_cmd_done
+ *fill*         0x0000000040087671        0x0 
+ *fill*         0x0000000040087671        0x0 
+ *fill*         0x0000000040087671        0x0 
+ *fill*         0x0000000040087671        0x0 
+ *fill*         0x0000000040087671        0x0 
+ *fill*         0x0000000040087671        0x0 
+ *fill*         0x0000000040087671        0x0 
+ *fill*         0x0000000040087671        0x0 
+ *fill*         0x0000000040087671        0x0 
+ *libsoc.a:rtc_wdt.*(.literal .literal.* .text .text.*)
+ *fill*         0x0000000040087671        0x3 
  .text.rtc_wdt_get_protect_status
-                0x0000000040086fdc       0x1b /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
-                0x0000000040086fdc                rtc_wdt_get_protect_status
- *fill*         0x0000000040086ff7        0x1 
+                0x0000000040087674       0x1b /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040087674                rtc_wdt_get_protect_status
+ *fill*         0x000000004008768f        0x1 
  .text.rtc_wdt_protect_off
-                0x0000000040086ff8       0x10 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
-                0x0000000040086ff8                rtc_wdt_protect_off
+                0x0000000040087690       0x10 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040087690                rtc_wdt_protect_off
  .text.rtc_wdt_protect_on
-                0x0000000040087008        0xf /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
-                0x0000000040087008                rtc_wdt_protect_on
- *fill*         0x0000000040087017        0x1 
+                0x00000000400876a0        0xf /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                0x00000000400876a0                rtc_wdt_protect_on
+ *fill*         0x00000000400876af        0x1 
  .text.rtc_wdt_enable
-                0x0000000040087018       0x2b /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
-                0x0000000040087018                rtc_wdt_enable
- *fill*         0x0000000040087043        0x1 
+                0x00000000400876b0       0x2b /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                0x00000000400876b0                rtc_wdt_enable
+ *fill*         0x00000000400876db        0x1 
  .text.rtc_wdt_flashboot_mode_enable
-                0x0000000040087044       0x18 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
-                0x0000000040087044                rtc_wdt_flashboot_mode_enable
+                0x00000000400876dc       0x18 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                0x00000000400876dc                rtc_wdt_flashboot_mode_enable
  .text.rtc_wdt_feed
-                0x000000004008705c       0x2a /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                0x00000000400876f4       0x2a /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
                                          0x32 (size before relaxing)
-                0x000000004008705c                rtc_wdt_feed
- *fill*         0x0000000040087086        0x2 
+                0x00000000400876f4                rtc_wdt_feed
+ *fill*         0x000000004008771e        0x2 
  .text.rtc_wdt_set_time
-                0x0000000040087088       0x61 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
-                0x0000000040087088                rtc_wdt_set_time
- *fill*         0x00000000400870e9        0x3 
+                0x0000000040087720       0x61 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040087720                rtc_wdt_set_time
+ *fill*         0x0000000040087781        0x3 
  .text.rtc_wdt_set_stage
-                0x00000000400870ec       0xc1 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
-                0x00000000400870ec                rtc_wdt_set_stage
- *fill*         0x00000000400871ad        0x3 
+                0x0000000040087784       0xc1 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040087784                rtc_wdt_set_stage
+ *fill*         0x0000000040087845        0x3 
  .text.rtc_wdt_disable
-                0x00000000400871b0       0x6a /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040087848       0x6a /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
                                          0x7e (size before relaxing)
-                0x00000000400871b0                rtc_wdt_disable
- *fill*         0x000000004008721a        0x2 
+                0x0000000040087848                rtc_wdt_disable
+ *fill*         0x00000000400878b2        0x2 
  .text.rtc_wdt_set_length_of_reset_signal
-                0x000000004008721c       0x71 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
-                0x000000004008721c                rtc_wdt_set_length_of_reset_signal
- *fill*         0x000000004008728d        0x3 
+                0x00000000400878b4       0x71 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                0x00000000400878b4                rtc_wdt_set_length_of_reset_signal
+ *fill*         0x0000000040087925        0x3 
  .text.rtc_wdt_is_on
-                0x0000000040087290       0x28 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
-                0x0000000040087290                rtc_wdt_is_on
- *fill*         0x00000000400872b8        0x0 
- *fill*         0x00000000400872b8        0x0 
- *fill*         0x00000000400872b8        0x0 
- *fill*         0x00000000400872b8        0x0 
- *fill*         0x00000000400872b8        0x0 
- *fill*         0x00000000400872b8        0x0 
- *fill*         0x00000000400872b8        0x0 
- *fill*         0x00000000400872b8        0x0 
- *fill*         0x00000000400872b8        0x0 
+                0x0000000040087928       0x28 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040087928                rtc_wdt_is_on
+ *fill*         0x0000000040087950        0x0 
+ *fill*         0x0000000040087950        0x0 
+ *fill*         0x0000000040087950        0x0 
+ *fill*         0x0000000040087950        0x0 
+ *fill*         0x0000000040087950        0x0 
+ *fill*         0x0000000040087950        0x0 
+ *fill*         0x0000000040087950        0x0 
+ *fill*         0x0000000040087950        0x0 
  *libsoc.a:spi_slave_hal_iram.*(.literal .literal.* .text .text.*)
  *libsoc.a:lldesc.*(.literal .literal.* .text .text.*)
  *libsoc.a:rtc_periph.*(.literal .literal.* .text .text.*)
@@ -29898,64 +29949,13 @@ END GROUP
  *libsoc.a:emac_hal.*(.literal.emac_hal_rx_early_cb .text.emac_hal_rx_early_cb)
  *libsoc.a:emac_hal.*(.literal.emac_hal_tx_unavail_cb .text.emac_hal_tx_unavail_cb)
  *libsoc.a:rtc_clk_init.*(.literal .literal.* .text .text.*)
+ *libsoc.a:emac_hal.*(.literal.emac_hal_rx_unavail_cb .text.emac_hal_rx_unavail_cb)
  *libsoc.a:spi_hal_iram.*(.literal .literal.* .text .text.*)
  *libsoc.a:rtc_sleep.*(.literal .literal.* .text .text.*)
  *libsoc.a:emac_hal.*(.literal.emac_hal_isr .text.emac_hal_isr)
- *libsoc.a:emac_hal.*(.literal.emac_hal_rx_unavail_cb .text.emac_hal_rx_unavail_cb)
- *libsoc.a:spi_flash_hal_iram.*(.literal .literal.* .text .text.*)
- .text.spi_flash_hal_device_config
-                0x00000000400872b8       0x84 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x00000000400872b8                spi_flash_hal_device_config
- .text.spi_flash_hal_configure_host_read_mode
-                0x000000004008733c      0x1b1 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x000000004008733c                spi_flash_hal_configure_host_read_mode
- *fill*         0x00000000400874ed        0x3 
- .text.spi_flash_hal_common_command
-                0x00000000400874f0      0x185 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x00000000400874f0                spi_flash_hal_common_command
- *fill*         0x0000000040087675        0x3 
- .text.spi_flash_hal_erase_chip
-                0x0000000040087678       0x22 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x0000000040087678                spi_flash_hal_erase_chip
- *fill*         0x000000004008769a        0x2 
- .text.spi_flash_hal_erase_sector
-                0x000000004008769c       0x5a /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x000000004008769c                spi_flash_hal_erase_sector
- *fill*         0x00000000400876f6        0x2 
- .text.spi_flash_hal_erase_block
-                0x00000000400876f8       0x52 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x00000000400876f8                spi_flash_hal_erase_block
- *fill*         0x000000004008774a        0x2 
- .text.spi_flash_hal_program_page
-                0x000000004008774c       0xa7 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x000000004008774c                spi_flash_hal_program_page
- *fill*         0x00000000400877f3        0x1 
- .text.spi_flash_hal_read
-                0x00000000400877f4       0xcb /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x00000000400877f4                spi_flash_hal_read
- *fill*         0x00000000400878bf        0x1 
- .text.spi_flash_hal_host_idle
-                0x00000000400878c0       0x3a /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x00000000400878c0                spi_flash_hal_host_idle
- *fill*         0x00000000400878fa        0x2 
- .text.spi_flash_hal_set_write_protect
-                0x00000000400878fc       0x40 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x00000000400878fc                spi_flash_hal_set_write_protect
- .text.spi_flash_hal_poll_cmd_done
-                0x000000004008793c       0x11 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(spi_flash_hal_iram.o)
-                0x000000004008793c                spi_flash_hal_poll_cmd_done
- *fill*         0x000000004008794d        0x0 
- *fill*         0x000000004008794d        0x0 
- *fill*         0x000000004008794d        0x0 
- *fill*         0x000000004008794d        0x0 
- *fill*         0x000000004008794d        0x0 
- *fill*         0x000000004008794d        0x0 
- *fill*         0x000000004008794d        0x0 
- *fill*         0x000000004008794d        0x0 
- *fill*         0x000000004008794d        0x0 
+ *libsoc.a:emac_hal.*(.literal.emac_hal_tx_complete_cb .text.emac_hal_tx_complete_cb)
  *libsoc.a:cpu_util.*(.literal .literal.* .text .text.*)
  *libsoc.a:rtc_clk.*(.literal .literal.* .text .text.*)
- *fill*         0x000000004008794d        0x3 
  .text.rtc_clk_32k_enable_common
                 0x0000000040087950       0x88 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_bbpll_disable
@@ -32369,7 +32369,7 @@ END GROUP
 .flash.text     0x00000000400d0018    0x1a357
                 0x00000000400d0018                _stext = .
                 0x00000000400d0018                _text_start = ABSOLUTE (.)
- *(EXCLUDE_FILE(*libesp_gdbstub.a *libespcoredump.a:core_dump_flash.* *libespcoredump.a:core_dump_common.* *libespcoredump.a:core_dump_uart.* *libespcoredump.a:core_dump_port.* *libfreertos.a *libhal.a *libnewlib.a:heap.* *libxtensa.a:eri.* *libsoc.a:rtc_init.* *libsoc.a:rtc_time.* *libsoc.a:rtc_wdt.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:lldesc.* *libsoc.a:rtc_periph.* *libsoc.a:rtc_pm.* *libsoc.a:rtc_clk_init.* *libsoc.a:spi_hal_iram.* *libsoc.a:rtc_sleep.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:cpu_util.* *libsoc.a:rtc_clk.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:memspi_host_driver.* *libesp32.a:panic.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *librtc.a *libgcc.a:_divsf3.* *libgcc.a:lib2funcs.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW.* *libapp_trace.a:app_trace.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libgcov.a *libesp_ringbuf.a) .literal EXCLUDE_FILE(*libesp_gdbstub.a *libespcoredump.a:core_dump_flash.* *libespcoredump.a:core_dump_common.* *libespcoredump.a:core_dump_uart.* *libespcoredump.a:core_dump_port.* *libfreertos.a *libhal.a *libnewlib.a:heap.* *libxtensa.a:eri.* *libsoc.a:rtc_init.* *libsoc.a:rtc_time.* *libsoc.a:rtc_wdt.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:lldesc.* *libsoc.a:rtc_periph.* *libsoc.a:rtc_pm.* *libsoc.a:rtc_clk_init.* *libsoc.a:spi_hal_iram.* *libsoc.a:rtc_sleep.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:cpu_util.* *libsoc.a:rtc_clk.* *libsoc.a:emac_hal.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:memspi_host_driver.* *libesp32.a:panic.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *librtc.a *libesp_event.a:esp_event.* *libesp_event.a:default_event_loop.* *libgcc.a:_divsf3.* *libgcc.a:lib2funcs.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW.* *libapp_trace.a:app_trace.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libgcov.a *libesp_ringbuf.a *libesp_eth.a:esp_eth_mac_dm9051.* *libesp_eth.a:esp_eth_mac_esp32.*) .literal.* EXCLUDE_FILE(*libesp_gdbstub.a *libespcoredump.a:core_dump_flash.* *libespcoredump.a:core_dump_common.* *libespcoredump.a:core_dump_uart.* *libespcoredump.a:core_dump_port.* *libfreertos.a *libhal.a *libnewlib.a:heap.* *libxtensa.a:eri.* *libsoc.a:rtc_init.* *libsoc.a:rtc_time.* *libsoc.a:rtc_wdt.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:lldesc.* *libsoc.a:rtc_periph.* *libsoc.a:rtc_pm.* *libsoc.a:rtc_clk_init.* *libsoc.a:spi_hal_iram.* *libsoc.a:rtc_sleep.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:cpu_util.* *libsoc.a:rtc_clk.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:memspi_host_driver.* *libesp32.a:panic.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *librtc.a *libgcc.a:_divsf3.* *libgcc.a:lib2funcs.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW.* *libapp_trace.a:app_trace.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libgcov.a *libesp_ringbuf.a) .text EXCLUDE_FILE(*libesp_gdbstub.a *libespcoredump.a:core_dump_flash.* *libespcoredump.a:core_dump_common.* *libespcoredump.a:core_dump_uart.* *libespcoredump.a:core_dump_port.* *libfreertos.a *libhal.a *libnewlib.a:heap.* *libxtensa.a:eri.* *libsoc.a:rtc_init.* *libsoc.a:rtc_time.* *libsoc.a:rtc_wdt.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:lldesc.* *libsoc.a:rtc_periph.* *libsoc.a:rtc_pm.* *libsoc.a:rtc_clk_init.* *libsoc.a:spi_hal_iram.* *libsoc.a:rtc_sleep.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:cpu_util.* *libsoc.a:rtc_clk.* *libsoc.a:emac_hal.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:memspi_host_driver.* *libesp32.a:panic.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *librtc.a *libesp_event.a:esp_event.* *libesp_event.a:default_event_loop.* *libgcc.a:_divsf3.* *libgcc.a:lib2funcs.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW.* *libapp_trace.a:app_trace.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libgcov.a *libesp_ringbuf.a *libesp_eth.a:esp_eth_mac_dm9051.* *libesp_eth.a:esp_eth_mac_esp32.*) .text.* EXCLUDE_FILE(*libnet80211.a *libpp.a) .wifi0iram EXCLUDE_FILE(*libnet80211.a *libpp.a) .wifi0iram.*)
+ *(EXCLUDE_FILE(*libesp_gdbstub.a *libespcoredump.a:core_dump_flash.* *libespcoredump.a:core_dump_common.* *libespcoredump.a:core_dump_uart.* *libespcoredump.a:core_dump_port.* *libfreertos.a *libhal.a *libnewlib.a:heap.* *libxtensa.a:eri.* *libsoc.a:rtc_init.* *libsoc.a:rtc_time.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:rtc_wdt.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:lldesc.* *libsoc.a:rtc_periph.* *libsoc.a:rtc_pm.* *libsoc.a:rtc_clk_init.* *libsoc.a:spi_hal_iram.* *libsoc.a:rtc_sleep.* *libsoc.a:cpu_util.* *libsoc.a:rtc_clk.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:memspi_host_driver.* *libesp32.a:panic.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *librtc.a *libgcc.a:_divsf3.* *libgcc.a:lib2funcs.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW.* *libapp_trace.a:app_trace.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libgcov.a *libesp_ringbuf.a) .literal EXCLUDE_FILE(*libesp_gdbstub.a *libespcoredump.a:core_dump_flash.* *libespcoredump.a:core_dump_common.* *libespcoredump.a:core_dump_uart.* *libespcoredump.a:core_dump_port.* *libfreertos.a *libhal.a *libnewlib.a:heap.* *libxtensa.a:eri.* *libsoc.a:rtc_init.* *libsoc.a:rtc_time.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:rtc_wdt.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:lldesc.* *libsoc.a:rtc_periph.* *libsoc.a:rtc_pm.* *libsoc.a:rtc_clk_init.* *libsoc.a:spi_hal_iram.* *libsoc.a:rtc_sleep.* *libsoc.a:cpu_util.* *libsoc.a:rtc_clk.* *libsoc.a:emac_hal.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:memspi_host_driver.* *libesp32.a:panic.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *librtc.a *libesp_event.a:esp_event.* *libesp_event.a:default_event_loop.* *libgcc.a:_divsf3.* *libgcc.a:lib2funcs.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW.* *libapp_trace.a:app_trace.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libgcov.a *libesp_ringbuf.a *libesp_eth.a:esp_eth_mac_dm9051.* *libesp_eth.a:esp_eth_mac_esp32.*) .literal.* EXCLUDE_FILE(*libesp_gdbstub.a *libespcoredump.a:core_dump_flash.* *libespcoredump.a:core_dump_common.* *libespcoredump.a:core_dump_uart.* *libespcoredump.a:core_dump_port.* *libfreertos.a *libhal.a *libnewlib.a:heap.* *libxtensa.a:eri.* *libsoc.a:rtc_init.* *libsoc.a:rtc_time.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:rtc_wdt.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:lldesc.* *libsoc.a:rtc_periph.* *libsoc.a:rtc_pm.* *libsoc.a:rtc_clk_init.* *libsoc.a:spi_hal_iram.* *libsoc.a:rtc_sleep.* *libsoc.a:cpu_util.* *libsoc.a:rtc_clk.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:memspi_host_driver.* *libesp32.a:panic.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *librtc.a *libgcc.a:_divsf3.* *libgcc.a:lib2funcs.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW.* *libapp_trace.a:app_trace.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libgcov.a *libesp_ringbuf.a) .text EXCLUDE_FILE(*libesp_gdbstub.a *libespcoredump.a:core_dump_flash.* *libespcoredump.a:core_dump_common.* *libespcoredump.a:core_dump_uart.* *libespcoredump.a:core_dump_port.* *libfreertos.a *libhal.a *libnewlib.a:heap.* *libxtensa.a:eri.* *libsoc.a:rtc_init.* *libsoc.a:rtc_time.* *libsoc.a:spi_flash_hal_iram.* *libsoc.a:rtc_wdt.* *libsoc.a:spi_slave_hal_iram.* *libsoc.a:lldesc.* *libsoc.a:rtc_periph.* *libsoc.a:rtc_pm.* *libsoc.a:rtc_clk_init.* *libsoc.a:spi_hal_iram.* *libsoc.a:rtc_sleep.* *libsoc.a:cpu_util.* *libsoc.a:rtc_clk.* *libsoc.a:emac_hal.* *libspi_flash.a:spi_flash_rom_patch.* *libspi_flash.a:spi_flash_chip_issi.* *libspi_flash.a:spi_flash_chip_generic.* *libspi_flash.a:memspi_host_driver.* *libesp32.a:panic.* *libheap.a:multi_heap_poisoning.* *libheap.a:multi_heap.* *librtc.a *libesp_event.a:esp_event.* *libesp_event.a:default_event_loop.* *libgcc.a:_divsf3.* *libgcc.a:lib2funcs.* *libapp_trace.a:SEGGER_SYSVIEW_Config_FreeRTOS.* *libapp_trace.a:SEGGER_SYSVIEW.* *libapp_trace.a:app_trace.* *libapp_trace.a:app_trace_util.* *libapp_trace.a:SEGGER_RTT_esp32.* *libapp_trace.a:SEGGER_SYSVIEW_FreeRTOS.* *libgcov.a *libesp_ringbuf.a *libesp_eth.a:esp_eth_mac_dm9051.* *libesp_eth.a:esp_eth_mac_esp32.*) .text.* EXCLUDE_FILE(*libnet80211.a *libpp.a) .wifi0iram EXCLUDE_FILE(*libnet80211.a *libpp.a) .wifi0iram.*)
  .literal.esp_ota_get_app_description
                 0x00000000400d0018        0x4 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/build/app_update/libapp_update.a(esp_app_desc.o)
  .literal.cpu_configure_region_protection
