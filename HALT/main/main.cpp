@@ -15,6 +15,8 @@
 #include "../components/servo/PCA9685Test/PCA9685test.h"
 #include "../components/servo/Oscillator/oscillator.h"
 #include "../components/MPU6050/Test/MPU6050_raw.h"
+#include "../components/MPU6050/Test/MPU6050_DMP6.h"
+#include "../components/MPU6050/Calibration/MPUoffset.h"
 
 extern "C" {
 void app_main(void) {
@@ -64,7 +66,9 @@ void app_main(void) {
 	//xTaskCreate(PWMtask,"testPWMtask",10000,NULL,1,NULL);
 	//xTaskCreate(PCA9685Task,"testPCA9685Task",10000,NULL,1,NULL);
 	//xTaskCreate(OscillatorTask,"OscillatorTask",10000,NULL,1,NULL);
-	xTaskCreate(mpuTask,"MPUtask",10000,NULL,1,NULL);
+	xTaskCreate(mpuTask,"MPUTesttask",10000,NULL,1,NULL);
+	//xTaskCreate(mpuDMPTask,"MPU_DMPtask",10000,NULL,1,NULL);
+	//xTaskCreate(mpuOffsetTask,"MPU_Offsettask",10000,NULL,1,NULL);
 
 
 }

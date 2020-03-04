@@ -113,7 +113,9 @@ main.o: /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/main.cpp \
  /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/servo/PWMtest.h \
  /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/servo/PCA9685Test/PCA9685test.h \
  /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/servo/Oscillator/oscillator.h \
- /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/MPU6050/Test/MPU6050_raw.h
+ /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/MPU6050/Test/MPU6050_raw.h \
+ /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/MPU6050/Test/MPU6050_DMP6.h \
+ /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/MPU6050/Calibration/MPUoffset.h
 
 /home/biba/BIBA/esp/ComponentRepo/esp-idf/components/nvs_flash/include/nvs_flash.h:
 
@@ -344,4 +346,8 @@ main.o: /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/main.cpp \
 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/servo/Oscillator/oscillator.h:
 
 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/MPU6050/Test/MPU6050_raw.h:
+
+/home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/MPU6050/Test/MPU6050_DMP6.h:
+
+/home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/MPU6050/Calibration/MPUoffset.h:
 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/./main.cpp:

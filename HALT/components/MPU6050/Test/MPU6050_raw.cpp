@@ -51,7 +51,7 @@ using namespace std;
 // Arduino Wire library is required if I2Cdev I2CDEV_ARDUINO_WIRE implementation
 // is used in I2Cdev.h
 #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
-    //#include "Wire.h"
+
 #endif
 
 // class default I2C address is 0x68
@@ -93,7 +93,7 @@ void mpusetup() {
     // initialize serial communication
     // (38400 chosen because it works as well at 8MHz as it does at 16MHz, but
     // it's really up to you depending on your project)
-    //Serial.begin(38400);
+    //Serial.begin(38400); remove since it has been declared once in the main function
 
     // initialize device
     Serial.println("Initializing I2C devices...");
@@ -104,15 +104,15 @@ void mpusetup() {
     Serial.println(accelgyro.testConnection() ? "MPU6050 connection successful" : "MPU6050 connection failed");
 
     // use the code below to change accel/gyro offset values
-    /*
+
     Serial.println("Updating internal sensor offsets...");
     // -76	-2359	1688	0	0	0
-    Serial.print(accelgyro.getXAccelOffset()); Serial.print("\t"); // -76
-    Serial.print(accelgyro.getYAccelOffset()); Serial.print("\t"); // -2359
-    Serial.print(accelgyro.getZAccelOffset()); Serial.print("\t"); // 1688
-    Serial.print(accelgyro.getXGyroOffset()); Serial.print("\t"); // 0
-    Serial.print(accelgyro.getYGyroOffset()); Serial.print("\t"); // 0
-    Serial.print(accelgyro.getZGyroOffset()); Serial.print("\t"); // 0
+    Serial.print("Acc offset X:\t");Serial.print(accelgyro.getXAccelOffset()); Serial.print("\t"); // -76
+    Serial.print("Acc offset Y:\t");Serial.print(accelgyro.getYAccelOffset()); Serial.print("\t"); // -2359
+    Serial.print("Acc offset Z:\t");Serial.print(accelgyro.getZAccelOffset()); Serial.print("\t"); // 1688
+    Serial.print("Gyro offset X:\t");Serial.print(accelgyro.getXGyroOffset()); Serial.print("\t"); // 0
+    Serial.print("Gyro offset Y:\t");Serial.print(accelgyro.getYGyroOffset()); Serial.print("\t"); // 0
+    Serial.print("Gyro offset Z:\t");Serial.print(accelgyro.getZGyroOffset()); Serial.print("\t"); // 0
     Serial.print("\n");
     accelgyro.setXGyroOffset(220);
     accelgyro.setYGyroOffset(76);
@@ -124,7 +124,7 @@ void mpusetup() {
     Serial.print(accelgyro.getYGyroOffset()); Serial.print("\t"); // 0
     Serial.print(accelgyro.getZGyroOffset()); Serial.print("\t"); // 0
     Serial.print("\n");
-    */
+
 
     // configure Arduino LED pin for output
     pinMode(LED_PIN, OUTPUT);
@@ -145,13 +145,19 @@ void mpuTask(void *arg)  {
 
     #ifdef OUTPUT_READABLE_ACCELGYRO
         // display tab-separated accel/gyro x/y/z values
-        Serial.print("a/g:\t");
-        Serial.print(ax); Serial.print("\t");
-        Serial.print(ay); Serial.print("\t");
-        Serial.print(az); Serial.print("\t");
-        Serial.print(gx); Serial.print("\t");
-        Serial.print(gy); Serial.print("\t");
-        Serial.println(gz);
+
+
+    		//Serial.print("a/g:\t");
+    		Serial.print("Acc(x):\t");Serial.print(ax); Serial.print("\t");
+    		Serial.print("Acc(y):\t");Serial.print(ay); Serial.print("\t");
+    		Serial.print("Acc(z):\t");Serial.print(az); Serial.print("\t");
+    		//delay(500);
+    		Serial.print("Gyro(x):\t");Serial.print(gx);Serial.print("\t");
+    		Serial.print("Gyro(y):\t");Serial.print(gy);Serial.print("\t");
+    		Serial.print("Gyro(z):\t");Serial.println(gz);
+    		delay(500);
+
+
     #endif
 
     #ifdef OUTPUT_BINARY_ACCELGYRO
