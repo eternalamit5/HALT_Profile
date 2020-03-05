@@ -115,7 +115,8 @@ main.o: /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/main.cpp \
  /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/servo/PCA9685Test/PCA9685test.h \
  /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/servo/Oscillator/oscillator.h \
  /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/MPU6050/Test/MPU6050_raw.h \
- /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/MPU6050/Test/MPUoffset.h
+ /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/MPU6050/Test/MPUoffset.h \
+ /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/Stepper/Test/StepperTest.h
 
 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/components/MPU6050/CalibrationMPU6050/MPUoffset.h:
 
@@ -350,4 +351,6 @@ main.o: /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/main.cpp \
 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/MPU6050/Test/MPU6050_raw.h:
 
 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/MPU6050/Test/MPUoffset.h:
+
+/home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/../components/Stepper/Test/StepperTest.h:
 /home/biba/BIBA/Amit/HALT/HALT_Profile/HALT/main/./main.cpp:

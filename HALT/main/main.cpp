@@ -17,7 +17,7 @@
 #include "../components/servo/Oscillator/oscillator.h"
 #include "../components/MPU6050/Test/MPU6050_raw.h"
 #include "../components/MPU6050/Test/MPUoffset.h"
-//#include "../components/Stepper/Test/StepperTest.h"
+#include "../components/Stepper/Test/StepperTest.h"
 
 extern "C" {
 void app_main(void) {
@@ -40,6 +40,7 @@ void app_main(void) {
 	 Baud rate: 115200
 	 */
 	Serial.begin(115200);
+
 
 	/*Initialize I2C communication
 	 SDA: GPIO 23
@@ -67,8 +68,8 @@ void app_main(void) {
 	//xTaskCreate(PCA9685Task,"testPCA9685Task",10000,NULL,1,NULL);
 	//xTaskCreate(OscillatorTask,"OscillatorTask",10000,NULL,1,NULL);
 	//xTaskCreate(mpuTask,"MPUTesttask",10000,NULL,1,NULL);
-	xTaskCreate(offsetTask,"MPU_OffsetTask",10000,NULL,1,NULL);
-	//xTaskCreate(StepperMotorTask,"testStepperMotorTask",10000,NULL,1,NULL);
+	//xTaskCreate(offsetTask,"MPU_OffsetTask",10000,NULL,1,NULL);
+	xTaskCreate(StepperMotorTask,"testStepperMotorTask",10000,NULL,1,NULL);
 
 
 }
