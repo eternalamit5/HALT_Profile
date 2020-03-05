@@ -59,8 +59,8 @@ void mpuOffsetSetup() {
     delay(500);
     Serial.println("Initializing I2C devices...");
     accelgyro.initialize();
-    accelgyro.setFullScaleGyroRange(MPU6050_GYRO_FS_2000);
-    accelgyro.setFullScaleAccelRange(MPU6050_ACCEL_FS_2);
+    accelgyro.setFullScaleGyroRange(MPU6050_GYRO_FS_2000); //add
+    accelgyro.setFullScaleAccelRange(MPU6050_ACCEL_FS_2); //add
 
     Serial.println("Testing device connections...");
     Serial.println(accelgyro.testConnection() ? "MPU6050 connection successful" : "MPU6050 connection failed");
@@ -96,7 +96,7 @@ void offsetTask(void *arg)  {
         blinkState = !blinkState;
         digitalWrite(LED_PIN, blinkState);
         delay(1000);
-        return;
+        //return;
     }
 
 
@@ -126,7 +126,7 @@ void offsetTask(void *arg)  {
     delay(200);
 }
 
-	vTaskDelete(NULL);
+	//vTaskDelete(NULL);
 }
 
 void printData()
@@ -141,13 +141,18 @@ void printData()
     Serial.print("Gyro(z):\t");Serial.println(gz);
     delay(500);
     Serial.print("\n");
-
+    Serial.print("\n");
+    Serial.print("===========================================================================================================");
+    Serial.print("\n");
     Serial.print("Acc offset X:\t");Serial.print(off_ax); Serial.print("\t");
     Serial.print("Acc offset Y:\t");Serial.print(off_ay); Serial.print("\t");
     Serial.print("Acc offset Z:\t");Serial.print(off_az); Serial.print("\t");
     Serial.print("Gyro offset X:\t");Serial.print(off_gx); Serial.print("\t");
     Serial.print("Gyro offset Y:\t");Serial.print(off_gy); Serial.print("\t");
     Serial.print("Gyro offset Z:\t");Serial.print(off_gz); Serial.print("\t");
+    Serial.print("\n");
+    Serial.print("\n");
+    Serial.print("===========================================================================================================");
     Serial.print("\n");
     Serial.print("Printing the mean value: ");
     Serial.print(mean(aax, HIST_SIZE)); Serial.print("\t");
@@ -156,6 +161,9 @@ void printData()
     Serial.print(mean(agx, HIST_SIZE)); Serial.print("\t");
     Serial.print(mean(agy, HIST_SIZE)); Serial.print("\t");
     Serial.print(mean(agz, HIST_SIZE)); Serial.print("\t");
+    Serial.print("\n");
+    Serial.print("\n");
+    Serial.print("===========================================================================================================");
     Serial.print("\n");
     Serial.print("Printing the standard deviation value: ");
     Serial.print(stddev(aax, HIST_SIZE)); Serial.print("\t");
