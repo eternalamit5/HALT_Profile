@@ -4,19 +4,22 @@
  *  Created on: Mar 4, 2020
  *      Author: biba
  */
-
+#include "movingAVG.cpp"
 #include "Average.h"
 #include "../../../components/MPU6050/I2Cdev.h"
 #include "../../../components/MPU6050/MPU6050.h"
+#include "MovingAvgFilter.h"
 //#include "../../../components/arduino-esp32/libraries/Wire/src/Wire.h"
 #include "stdlib.h"
-
 
 #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
 #include "../../../components/arduino-esp32/libraries/Wire/src/Wire.h"
 #endif
 using namespace std;
+
 #define HIST_SIZE 200
+
+MovingAverageFilter movingAverageFilter(HIST_SIZE);
 
 MPU6050 accelgyro;
 
@@ -44,6 +47,8 @@ int timestep = 0;
 #define LED_PIN 13
 bool blinkState = false;
 void printData();
+float movAvgFilter();
+int movingavg();
 
 // SETUP
 
@@ -58,8 +63,8 @@ void mpuOffsetSetup() {
 	delay(500);
 	Serial.println("Initializing I2C devices...");
 	accelgyro.initialize();
-	accelgyro.setFullScaleGyroRange(MPU6050_GYRO_FS_2000); //add
-	accelgyro.setFullScaleAccelRange(MPU6050_ACCEL_FS_2); //add
+	accelgyro.setFullScaleGyroRange(MPU6050_GYRO_FS_2000);
+	accelgyro.setFullScaleAccelRange(MPU6050_ACCEL_FS_2);
 
 	Serial.println("Testing device connections...");
 	Serial.println(
@@ -134,6 +139,8 @@ void offsetTask(void *arg) {
 		accelgyro.setZGyroOffset(off_gz);
 
 		printData();
+		//movingavg();
+		movAvgFilter();
 		// blink LED to indicate activity
 		blinkState = !blinkState;
 		digitalWrite(LED_PIN, blinkState);
@@ -146,6 +153,62 @@ void offsetTask(void *arg) {
 
 	//vTaskDelete(NULL);
 }
+
+/*
+int movingavg()
+{
+	// the size of this array represents how many numbers will be used to calculate the average
+	int arrNumbers[HIST_SIZE] = {0};
+
+	  int pos = 0;
+	  int newAvg = 0;
+	  long sum = 0;
+	  int len = sizeof(arrNumbers) / sizeof(int);
+	  int count = sizeof(aax) / sizeof(int);
+
+	  for(int i = 0; i < count; i++){
+	    newAvg = movingAvg(arrNumbers, &sum, pos, len, int(aax));
+	    printf("The new average for Acc(x) is %d\n", newAvg);
+	    pos++;
+	    if (pos >= len){
+	      pos = 0;
+	    }
+	  }
+	  return newAvg;
+}
+
+*/
+
+
+float movAvgFilter(){
+
+
+	Serial.print(
+				"===========================================================================================================");
+		Serial.print("\n");
+		Serial.print("Printing the moving average filter: ");
+
+
+		Serial.print("\n");
+		Serial.print("\n");
+
+	// declare input and output variables
+
+		float output = 0;
+
+		for (int n = 0; n <HIST_SIZE ; n++)
+		{ Serial.print("print the sample number n = ");// print the sample number
+
+			Serial.println(n, DEC);
+
+			Serial.println("Now cal average for Acc(x)...");
+			output = movingAverageFilter.process(aax); // here we call the fir routine with the input. The value 'fir' spits out is stored in the output variable.
+			Serial.println(output); // just for debugging or to understand what it does, print the output value
+		}
+return output;
+}
+
+
 
 void printData() {
 	Serial.print("\n");
@@ -229,5 +292,8 @@ void printData() {
 	Serial.print("\t");
 	Serial.print(stddev(agz, HIST_SIZE));
 	Serial.println("");
+
+
+
 }
 

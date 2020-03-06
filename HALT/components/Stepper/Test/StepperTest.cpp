@@ -20,7 +20,7 @@ For use with the Adafruit Motor Shield v2
 // Create the motor shield object with the default I2C address
 Adafruit_MotorShield AFMS = Adafruit_MotorShield();
 // Or, create it with a different I2C address (say for stacking)
-// Adafruit_MotorShield AFMS = Adafruit_MotorShield(0x61);
+//Adafruit_MotorShield AFMS = Adafruit_MotorShield(0x69);
 
 // Connect a stepper motor with 200 steps per revolution (1.8 degree)
 // to motor port #2 (M3 and M4)
