@@ -81,7 +81,7 @@ void Adafruit_MotorShield::begin(uint16_t freq, TwoWire *theWire) {
 	}
 
 	// init PWM w/_freq
-	_i2c->begin();
+	//_i2c->begin();
 	_pwm.begin();
 	_freq = freq;
 	_pwm.setPWMFreq(_freq);  // This is the maximum PWM frequency

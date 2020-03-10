@@ -47,7 +47,7 @@ void app_main(void) {
 	 SCL: GPIO 22
 	 Clock: 400*1000 Hz
 	 */
-	Wire.begin(23,22,50*1000);
+	Wire.begin(23,22,400*1000);  //Wire.begin(23,22,50*1000);
 
 	//Wire.begin();
 

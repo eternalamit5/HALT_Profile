@@ -48,7 +48,7 @@ int timestep = 0;
 bool blinkState = false;
 void printData();
 float movAvgFilter();
-int movingavg();
+//int movingavg();
 
 // SETUP
 
@@ -155,60 +155,55 @@ void offsetTask(void *arg) {
 }
 
 /*
-int movingavg()
-{
-	// the size of this array represents how many numbers will be used to calculate the average
-	int arrNumbers[HIST_SIZE] = {0};
+ int movingavg()
+ {
+ // the size of this array represents how many numbers will be used to calculate the average
+ int arrNumbers[HIST_SIZE] = {0};
 
-	  int pos = 0;
-	  int newAvg = 0;
-	  long sum = 0;
-	  int len = sizeof(arrNumbers) / sizeof(int);
-	  int count = sizeof(aax) / sizeof(int);
+ int pos = 0;
+ int newAvg = 0;
+ long sum = 0;
+ int len = sizeof(arrNumbers) / sizeof(int);
+ int count = sizeof(aax) / sizeof(int);
 
-	  for(int i = 0; i < count; i++){
-	    newAvg = movingAvg(arrNumbers, &sum, pos, len, int(aax));
-	    printf("The new average for Acc(x) is %d\n", newAvg);
-	    pos++;
-	    if (pos >= len){
-	      pos = 0;
-	    }
-	  }
-	  return newAvg;
-}
+ for(int i = 0; i < count; i++){
+ newAvg = movingAvg(arrNumbers, &sum, pos, len, int(aax));
+ printf("The new average for Acc(x) is %d\n", newAvg);
+ pos++;
+ if (pos >= len){
+ pos = 0;
+ }
+ }
+ return newAvg;
+ }
 
-*/
+ */
 
-
-float movAvgFilter(){
-
+float movAvgFilter() {
 
 	Serial.print(
-				"===========================================================================================================");
-		Serial.print("\n");
-		Serial.print("Printing the moving average filter: ");
+			"===========================================================================================================");
+	Serial.print("\n");
+	Serial.print("Printing the moving average filter: ");
 
-
-		Serial.print("\n");
-		Serial.print("\n");
+	Serial.print("\n");
+	Serial.print("\n");
 
 	// declare input and output variables
 
-		float output = 0;
+	float output = 0;
 
-		for (int n = 0; n <HIST_SIZE ; n++)
-		{ Serial.print("print the sample number n = ");// print the sample number
+	for (int n = 0; n < HIST_SIZE; n++) {
+		Serial.print("print the sample number n = "); // print the sample number
 
-			Serial.println(n, DEC);
+		Serial.println(n, DEC);
 
-			Serial.println("Now cal average for Acc(x)...");
-			output = movingAverageFilter.process(aax); // here we call the fir routine with the input. The value 'fir' spits out is stored in the output variable.
-			Serial.println(output); // just for debugging or to understand what it does, print the output value
-		}
-return output;
+		Serial.println("Now cal average for Acc(x)...");
+		output = movingAverageFilter.process(aax); // here we call the fir routine with the input. The value 'fir' spits out is stored in the output variable.
+		Serial.println(output); // just for debugging or to understand what it does, print the output value
+	}
+	return output;
 }
-
-
 
 void printData() {
 	Serial.print("\n");
@@ -292,8 +287,6 @@ void printData() {
 	Serial.print("\t");
 	Serial.print(stddev(agz, HIST_SIZE));
 	Serial.println("");
-
-
 
 }
 

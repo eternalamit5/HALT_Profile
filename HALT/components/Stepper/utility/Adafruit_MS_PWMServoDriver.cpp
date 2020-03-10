@@ -36,7 +36,7 @@ Adafruit_MS_PWMServoDriver::Adafruit_MS_PWMServoDriver(uint8_t addr) {
 }
 
 void Adafruit_MS_PWMServoDriver::begin(void) {
- WIRE.begin();
+ //WIRE.begin();
  reset();
 }
 
