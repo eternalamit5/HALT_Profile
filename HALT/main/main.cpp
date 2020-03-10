@@ -67,8 +67,8 @@ void app_main(void) {
 	//xTaskCreate(PWMtask,"testPWMtask",10000,NULL,1,NULL);
 	//xTaskCreate(PCA9685Task,"testPCA9685Task",10000,NULL,1,NULL);
 	//xTaskCreate(OscillatorTask,"OscillatorTask",10000,NULL,1,NULL);
-	//xTaskCreate(mpuTask,"MPUTesttask",10000,NULL,1,NULL);
-	xTaskCreate(offsetTask,"MPU_OffsetTask",10000,NULL,1,NULL);
+	xTaskCreate(mpuRawCallibrationTask,"MPUTesttask",10000,NULL,1,NULL);
+	//xTaskCreate(offsetTask,"MPU_OffsetTask",10000,NULL,1,NULL);
 	//xTaskCreate(StepperMotorTask,"testStepperMotorTask",10000,NULL,1,NULL);
 
 

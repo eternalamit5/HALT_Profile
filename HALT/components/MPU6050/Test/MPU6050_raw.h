@@ -9,7 +9,7 @@
 #define COMPONENTS_MPU6050_APP_MPU6050_RAW_H_
 
 
-void mpuTask(void* arg);
+void mpuRawCallibrationTask(void* arg);
 
 
 #endif /* COMPONENTS_MPU6050_APP_MPU6050_RAW_H_ */

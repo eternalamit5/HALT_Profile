@@ -64,8 +64,8 @@ MPU6050::MPU6050(uint8_t address):devAddr(address) {
  */
 void MPU6050::initialize() {
     setClockSource(MPU6050_CLOCK_PLL_XGYRO);
-    setFullScaleGyroRange(MPU6050_GYRO_FS_250);
-    setFullScaleAccelRange(MPU6050_ACCEL_FS_2);
+    setFullScaleGyroRange(MPU6050_GYRO_FS_250); // Full-Scale Range =0 i.e. Sensitivity Scale Factor of 131 corresponds to 1 degree/rotation
+    setFullScaleAccelRange(MPU6050_ACCEL_FS_2); // Full-Scale Range =0 i.e. Sensitivity Scale Factor of 16,384 corresponds to +-2g acceleration
     setSleepEnabled(false); // thanks to Jack Elston for pointing this one out!
 }
 
