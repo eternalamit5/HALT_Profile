@@ -75,6 +75,8 @@ int16_t gx, gy, gz;
 //#define OUTPUT_BINARY_ACCELGYRO
 
 #define LED_PIN 13
+#define Acc_scaling_factor 16384
+#define Gyro_scaling_factor 131
 bool blinkState = false;
 
 void mpusetup() {
@@ -140,6 +142,7 @@ void mpusetup() {
 
 void mpuRawCallibrationTask(void *arg) {
 	mpusetup();
+	const int samples=50000;
 	while (1) {
 		//sensor_temperature = (accelgyro.getTemperature() + 12412) / 340;
 
@@ -154,39 +157,36 @@ void mpuRawCallibrationTask(void *arg) {
 		float avg_gz = 0;
 		int times = 0;
 
-		//printData();
-		for (times = 0; times < 20; times++) {
+		for (loopCounter = 0; loopCounter < samples; loopCounter++) {
+			// read raw accel/gyro measurements from device
+			accelgyro.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
 
-			for (loopCounter = 0; loopCounter < 1000; loopCounter++) {
-				// read raw accel/gyro measurements from device
-				accelgyro.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
-
-				avg_ax = (avg_ax + ax);
-				avg_ay = (avg_ay + ay);
-				avg_az = (avg_az + az);
-				avg_gx = (avg_gx + gx);
-				avg_gy = (avg_gy + gy);
-				avg_gz = (avg_gz + gz);
-				delay(1);
-			}
+			avg_ax = (avg_ax + ax);
+			avg_ay = (avg_ay + ay);
+			avg_az = (avg_az + az);
+			avg_gx = (avg_gx + gx);
+			avg_gy = (avg_gy + gy);
+			avg_gz = (avg_gz + gz);
+			delay(1);
 		}
 
-		avg_ax /= 1000;
-		avg_ay /= 1000;
-		avg_az /= 1000;
-		avg_gx /= 1000;
-		avg_gy /= 1000;
-		avg_gz /= 1000;
+		avg_ax /= samples;
+		avg_ay /= samples;
+		avg_az /= samples;
+		avg_gx /= samples;
+		avg_gy /= samples;
+		avg_gz /= samples;
+
 		 Serial.print(
 		 "===========================================================================================================");
 		 Serial.print("\n");
 		Serial.println("Final Acc average value");
 		Serial.print("Acc(x):\t");
-		Serial.println(avg_ax / 16384);
+		Serial.println(avg_ax ); //Acc_scaling_factor
 		Serial.print("Acc(y):\t");
-		Serial.println(avg_ay / 16384);
+		Serial.println(avg_ay);
 		Serial.print("Acc(z):\t");
-		Serial.println(avg_az / 16384);
+		Serial.println(avg_az);
 		Serial.print("\n");
 		Serial.print("\n");
 		Serial.println("Final Gyro average value");
@@ -198,6 +198,7 @@ void mpuRawCallibrationTask(void *arg) {
 		Serial.println(avg_gz / 131);
 		Serial.print("\n");
 		Serial.print("\n");
+
 
 		// these methods (and a few others) are also available
 		//accelgyro.getAcceleration(&ax, &ay, &az);

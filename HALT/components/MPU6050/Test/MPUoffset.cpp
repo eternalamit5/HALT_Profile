@@ -140,7 +140,7 @@ void offsetTask(void *arg) {
 
 		printData();
 		//movingavg();
-		movAvgFilter();
+		//movAvgFilter();
 		// blink LED to indicate activity
 		blinkState = !blinkState;
 		digitalWrite(LED_PIN, blinkState);
