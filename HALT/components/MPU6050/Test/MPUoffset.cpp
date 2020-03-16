@@ -2,7 +2,7 @@
  * MPUoffset.cpp
  *
  *  Created on: Mar 4, 2020
- *      Author: biba
+ *      Author: amit
  */
 #include "movingAVG.cpp"
 #include "Average.h"

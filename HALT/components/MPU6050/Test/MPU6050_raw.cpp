@@ -2,7 +2,7 @@
  * MPU6050_raw.cpp
  *
  *  Created on: Mar 4, 2020
- *      Author: biba
+ *      Author: amit
  */
 
 // I2C device class (I2Cdev) demonstration Arduino sketch for MPU6050 class
@@ -40,6 +40,7 @@
 // I2Cdev and MPU6050 must be installed as libraries, or else the .cpp/.h files
 // for both classes must be in the include path of your project
 #include "stdlib.h"
+#include "string.h"
 #include "../../../components/MPU6050/MPU6050.h"
 #include "../../../components/arduino-esp32/libraries/Wire/src/Wire.h"
 #include "../../../components/MPU6050/I2Cdev.h"
@@ -62,6 +63,7 @@ MPU6050 accelgyro;
 
 int16_t ax, ay, az;
 int16_t gx, gy, gz;
+
 //void printData();
 // uncomment "OUTPUT_READABLE_ACCELGYRO" if you want to see a tab-separated
 // list of the accel X/Y/Z and then gyro X/Y/Z values in decimal. Easy to read,
@@ -77,7 +79,10 @@ int16_t gx, gy, gz;
 #define LED_PIN 13
 #define Acc_scaling_factor 16384
 #define Gyro_scaling_factor 131
+#define BUFFER_SIZE 200
 bool blinkState = false;
+
+float gyro[BUFFER_SIZE];
 
 void mpusetup() {
 	Serial.println("MPU 6050 Raw data Callibration TEST!");
@@ -142,7 +147,7 @@ void mpusetup() {
 
 void mpuRawCallibrationTask(void *arg) {
 	mpusetup();
-	const int samples=50000;
+	const int samples = 5000;
 	while (1) {
 		//sensor_temperature = (accelgyro.getTemperature() + 12412) / 340;
 
@@ -155,59 +160,113 @@ void mpuRawCallibrationTask(void *arg) {
 		float avg_gx = 0;
 		float avg_gy = 0;
 		float avg_gz = 0;
-		int times = 0;
+		int sampleNum = 0;
 
-		for (loopCounter = 0; loopCounter < samples; loopCounter++) {
-			// read raw accel/gyro measurements from device
-			accelgyro.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
+		float aax[BUFFER_SIZE];
+		float aay[BUFFER_SIZE];
+		float aaz[BUFFER_SIZE];
+		float agx[BUFFER_SIZE];
+		float agy[BUFFER_SIZE];
+		float agz[BUFFER_SIZE];
 
-			avg_ax = (avg_ax + ax);
-			avg_ay = (avg_ay + ay);
-			avg_az = (avg_az + az);
-			avg_gx = (avg_gx + gx);
-			avg_gy = (avg_gy + gy);
-			avg_gz = (avg_gz + gz);
-			delay(1);
+		for (int i = 0; i < 20; i++) {
+
+			for (loopCounter = 0; loopCounter < samples; loopCounter++) {
+				// read raw accel/gyro measurements from device
+				accelgyro.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
+
+				avg_ax = (avg_ax + ax);
+				avg_ay = (avg_ay + ay);
+				avg_az = (avg_az + az);
+				avg_gx = (avg_gx + gx);
+				avg_gy = (avg_gy + gy);
+				avg_gz = (avg_gz + gz);
+				delay(1);
+			}
+
+			avg_ax /= samples;
+			avg_ay /= samples;
+			avg_az /= samples;
+			avg_gx /= samples;
+			avg_gy /= samples;
+			avg_gz /= samples;
+
+			//gyro[0]=avg_gx;
+			//gyro[1]=avg_gy;
+			//gyro[2]=avg_gz;
+			aax[sampleNum] = avg_ax;
+			aay[sampleNum] = avg_ay;
+			aaz[sampleNum] = avg_az;
+			agx[sampleNum] = avg_gx;
+			agy[sampleNum] = avg_gy;
+			agz[sampleNum] = avg_gz;
+
+			sampleNum++;
+
+			// if(sampleNum > 20) {
+			//  sampleNum = 0;
+			Serial.println("Raw Acceleration average value stored in the buffer");
+			printf(" ACC_x[%d] is %f\n", i, aax[i]);
+			printf(" ACC_y[%d] is %f\n", i, aay[i]);
+			printf(" ACC_z[%d] is %f\n", i, aaz[i]);
+			Serial.print("\n");
+			Serial.print("\n");
+
+			Serial.println("Raw Gyro average value stored in the buffer");
+			printf(" Gyro_X[%d] is %f\n", i, agx[i]);
+			printf(" Gyro_Y[%d] is %f\n", i, agy[i]);
+			printf(" Gyro_Z[%d] is %f\n", i, agz[i]);
+			Serial.print(
+					"===========================================================================================================");
+			Serial.print("\n");
 		}
 
-		avg_ax /= samples;
-		avg_ay /= samples;
-		avg_az /= samples;
-		avg_gx /= samples;
-		avg_gy /= samples;
-		avg_gz /= samples;
+		//}
 
+		/*for (int i=0;i<3;i++){
 		 Serial.print(
 		 "===========================================================================================================");
 		 Serial.print("\n");
-		Serial.println("Final Acc average value");
-		Serial.print("Acc(x):\t");
-		Serial.println(avg_ax ); //Acc_scaling_factor
-		Serial.print("Acc(y):\t");
-		Serial.println(avg_ay);
-		Serial.print("Acc(z):\t");
-		Serial.println(avg_az);
-		Serial.print("\n");
-		Serial.print("\n");
-		Serial.println("Final Gyro average value");
-		Serial.print("Gyro(x):\t");
-		Serial.println(avg_gx / 131);
-		Serial.print("Gyro(y):\t");
-		Serial.println(avg_gy / 131);
-		Serial.print("Gyro(z):\t");
-		Serial.println(avg_gz / 131);
-		Serial.print("\n");
-		Serial.print("\n");
+
+		 Serial.println("Raw gyro average value in the buffer");
+		 printf(" Gyro_X is %f\n",gyro[0]);
+		 printf(" Gyro_Y is %f\n", gyro[1]);
+		 printf(" Gyro_Z is %f\n", gyro[2]);
+
+		 Serial.print("\n");
+		 Serial.print("\n");
 
 
-		// these methods (and a few others) are also available
-		//accelgyro.getAcceleration(&ax, &ay, &az);
-		//accelgyro.getRotation(&gx, &gy, &gz);
+		 }
+		 */
+
+		/*
+		 Serial.print(
+		 "===========================================================================================================");
+		 Serial.print("\n");
+		 Serial.println("Final Acc average value");
+		 Serial.print("Acc(x):\t");
+		 Serial.println(avg_ax/Acc_scaling_factor ); //Acc_scaling_factor
+		 Serial.print("Acc(y):\t");
+		 Serial.println(avg_ay/Acc_scaling_factor);
+		 Serial.print("Acc(z):\t");
+		 Serial.println(avg_az/Acc_scaling_factor);
+		 Serial.print("\n");
+		 Serial.print("\n");
+		 Serial.println("Final Gyro average value");
+		 Serial.print("Gyro(x):\t");
+		 Serial.println(avg_gx /Gyro_scaling_factor); //Gyro_scaling_factor=131
+		 Serial.print("Gyro(y):\t");
+		 Serial.println(avg_gy / Gyro_scaling_factor);
+		 Serial.print("Gyro(z):\t");
+		 Serial.println(avg_gz / Gyro_scaling_factor);
+		 Serial.print("\n");
+		 Serial.print("\n");
+
+		 */
 
 #ifdef OUTPUT_READABLE_ACCELGYRO
 		// display tab-separated accel/gyro x/y/z values
-
-
 
 #endif
 
@@ -215,9 +274,9 @@ void mpuRawCallibrationTask(void *arg) {
 }
 
 /*void printData() {
-	 Serial.print(
-			 "===========================================================================================================");
-			 Serial.print("\n");
+ Serial.print(
+ "===========================================================================================================");
+ Serial.print("\n");
  Serial.print("temp: ");
  Serial.print(sensor_temperature);
  Serial.print("\t");
@@ -244,7 +303,7 @@ void mpuRawCallibrationTask(void *arg) {
  Serial.print(
  "===========================================================================================================");
  Serial.print("\n");
-}
+ }
  Serial.print("Acc offset X:\t");
  Serial.print(off_ax);
  Serial.print("\t");
